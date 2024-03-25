@@ -18,8 +18,8 @@
 			$totalNetRevenue = 0;
 		@endphp
 		@foreach ($revenues as $revenue)
-			<tr>    
-				<td>{{ $revenue->date, 'd M Y' }}</td>
+			<tr>
+<td>{{ date('d M Y', strtotime($revenue->date)) }}</td>
 				<td>{{ $revenue->num_of_orders }}</td>
 				<td>{{ $revenue->gross_revenue }}</td>
 				<td>{{ $revenue->taxes_amount }}</td>
